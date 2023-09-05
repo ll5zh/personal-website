@@ -9,3 +9,4 @@ for (let i = 0; i < sections.length; ++i) {
         sections[i].style.backgroundColor = '#FFDBAA';
     }
 }
+
