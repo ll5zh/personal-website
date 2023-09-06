@@ -35,6 +35,9 @@ body {
     width: 100%;
 }
 
+.body {
+    width: 100%;
+}
 
 a {
     text-decoration: none;
@@ -104,19 +107,36 @@ button {
 
 .about {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
+    gap: 3rem;
 }
 
 .about > .title {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    justify-self: end;
+    margin-bottom: -3rem;
 }
 
 .about > img {
     grid-row: 2 / 3;
-    width: 50%;
+    width: 100%;
     border: 5px solid #302d29;
     border-radius: 2rem;
+}
+
+.about > .text {
+    align-self: center;
+    justify-content: center;
+}
+
+#about-info {
+    width: 100%;
+    font-size: 1.2rem;
+    border-spacing: 0.5rem;
+}
+
+td {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
