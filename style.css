@@ -182,3 +182,12 @@ td {
     text-align: center;
     padding: 0.3rem 0;
 }
+
+#work {
+    margin-top: 2rem;
+    border-spacing: 0.5rem;
+}
+
+ul, li {
+    margin-bottom: 0;
+}
