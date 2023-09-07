@@ -1,6 +1,5 @@
 const sections = document.querySelector('.body').children;
 for (let i = 0; i < sections.length; ++i) {
-    console.log(i);
     if (i % 2 == 1) {
         sections[i].style.backgroundColor = '#F4EEEE';
         const title = sections[i].querySelector('.h1');
@@ -20,12 +19,10 @@ const about = [
     ['Program', 'Computer Science']
 ]
 const aboutInfo = document.querySelector('#about-info');
-console.log(aboutInfo);
 
 function populateAbout() {
     
     about.forEach((item) => {
-        console.log(item);
         let row = aboutInfo.insertRow(-1);
         let key = row.insertCell(0);
         let value = row.insertCell(1);
@@ -34,7 +31,6 @@ function populateAbout() {
         key.innerHTML = item[0];
         value.innerHTML = item[1];
     });
-    console.log(about);
 }
 
 populateAbout();
@@ -115,7 +111,7 @@ Skills.printSkills();
 
 const Job = (title, employer, time, img, tasks) => {
     return { title, employer, time, img, tasks };
-}
+};
 
 const Jobs = (() => {
     const jobList = [
@@ -179,3 +175,60 @@ const Jobs = (() => {
 })();
 
 Jobs.printJobs();
+
+// Interests Section //
+
+const interestsInfo = document.querySelector('.interests-info');
+
+const Interest = (name, image, desc) => {
+    return { name, image, desc };
+};
+
+const Interests = (() => {
+    const interestList = [
+        Interest(
+            'Piano',
+            'images/gtspiano.svg',
+            'I\'ve been playing the piano since I was 6 years old. After obtaining my Associate Diploma (ARCT) in Piano Performance through the Royal Music Conservatory (RCM), I started writing my own piano arrangements of my favourite songs and uploading them to YouTube!\n\nYou can find my covers @gtspiano on <button style="height: auto; text-decoration: underline"><a href="https://www.instagram.com/gtspiano/">Instagram</a></button> and <button style="height: auto; text-decoration: underline"><a href="https://www.youtube.com/@gtspiano">Youtube</a></button>.'
+        ),
+        Interest(
+            'Singing',
+            'images/ifc.jpg',
+            'I joined my first choir when I was 10 years old, and sang with multiple vocal ensembles throughout high school. In university, I joined the University of Waterloo A Cappella Club (UWACC) and have enjoyed performing with various groups on campus! Noteably in Winter 2023, I competed with In Full Colour (IFC) at the the International Championship of Collegiate A Cappella (ICCA) and performed at the Los Angeles A Cappella Festival (LAAF)!'
+        ),
+        Interest(
+            'Bullet Journaling',
+            'images/bujo.jpg',
+            'Bullet journaling is often used as an artistic method of planning, journaling, and crafting in a single book. I love using both art and journaling to create scrapbook spreads of my favourite entertainments, music, and memories. As such, I love collecting all sorts of stationery, such as notebooks, pens, washi tape, and stickers!'
+        ),
+    ];
+    const printInterests = () => {
+        interestList.forEach((item, index) => {
+            const interest = document.createElement('div');
+            const name = document.createElement('div');
+            name.innerHTML = item.name;
+            name.style.cssText = 'background-color: #302d29; color: #F4EEEE; font-size: 1.5rem; border-radius: 1.5rem; text-align: center; padding: 0.5rem 0';
+            const image = document.createElement('img');
+            image.src = item.image;
+            image.style.cssText = 'max-width: 30vw; min-width: 0; border-radius: 3rem;';
+            const desc = document.createElement('div');
+            desc.innerHTML = item.desc;
+            desc.style.cssText = 'text-align: center';
+            interest.appendChild(name);
+            interest.appendChild(image);
+            interest.appendChild(desc);
+            interestsInfo.appendChild(interest);
+            if (index % 2 == 0) {
+                interest.style.cssText = 'background-color: #FFB7B7; padding: 1.7rem; border-radius: 3rem';
+            } else {
+                interest.style.cssText = 'background-color: #96C291; padding: 1.7rem; border-radius: 3rem';
+            }
+        });
+    };
+    return {
+        interestList,
+        printInterests,
+    };
+})();
+
+Interests.printInterests();
