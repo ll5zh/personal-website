@@ -76,7 +76,7 @@ button {
 }
 
 .body > * {
-    padding: 3rem;
+    padding: 5rem 3rem 7rem 3rem;
 }
 
 .body > * > .h1 {
@@ -85,7 +85,7 @@ button {
 }
 
 .welcome {
-    padding-top: 7rem;
+    padding-top: 9rem;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 3rem;
@@ -215,7 +215,7 @@ ul, li {
 .footer {
     background-color: #96C291;
     color: #F4EEEE;
-    padding: 3rem;
+    padding: 6rem 3rem 7rem 3rem;
 }
 
 .footer > .h1 {
