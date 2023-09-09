@@ -232,3 +232,53 @@ const Interests = (() => {
 })();
 
 Interests.printInterests();
+
+// Connect Section //
+
+const connectInfo = document.querySelector('.connect');
+
+const Contact = (title, icon, link) => {
+    return { title, icon, link };
+};
+
+const Connect = (() => {
+    const connectList = [
+        Contact(
+            'Email',
+            'images/outlook.svg',
+            'mailto:ll5zhang@uwaterloo.ca',
+        ),
+        Contact(
+            'LinkedIn', 
+            'images/linkedin.svg', 
+            'https://www.linkedin.com/in/lzhanglucia/',
+        ),
+        Contact(
+            'GitHub',
+            'images/github.svg',
+            'https://github.com/ll5zh',
+        ),
+    ];
+    const printConnect = () => {
+        connectList.forEach((item) => {
+            const row = document.createElement('button');
+            row.style.cssText = 'display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: center; background-color: #F4EEEE; padding: 1rem; border: 0.1rem #89b983 solid; border-radius: 2rem; align-self: center; width: 23rem';
+            const title = document.createElement('a');
+            title.href = item.link;
+            title.innerHTML = item.title;
+            title.style.cssText = 'color: #302d29; font-size: 1.2rem; text-decoration: underline';
+            const icon = document.createElement('img');
+            icon.style.cssText = 'max-height: 5rem';
+            icon.src = item.icon;
+            row.appendChild(title);
+            row.appendChild(icon);
+            connectInfo.appendChild(row);
+        });
+    };
+    return {
+        connectList,
+        printConnect,
+    }
+})();
+
+Connect.printConnect();
