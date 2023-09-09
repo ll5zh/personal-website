@@ -174,7 +174,7 @@ td {
     font-size: 1.2rem;
 }
 
-.experience > .text > * > .title {
+.experience > .text > * > .title, .contact > * > .title {
     font-size: 2rem;
     background-color: #302d29;
     color: #F4EEEE;
@@ -207,6 +207,67 @@ ul, li {
 .interests-info > * {
     width: 15rem;
     align-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer {
+    background-color: #96C291;
+    color: #F4EEEE;
+    padding: 3rem;
+}
+
+.footer > .h1 {
+    font-size: 10rem;
+    line-height:70%;
+    padding-bottom: 2rem;
+    padding-top: 1.6rem;
+    color: #302d29;
+}
+
+.contact {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.contact > * {
+    width: 50%;
+    flex-shrink: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact > * > .title {
+    font-size: 1.5rem;
+}
+
+form > .question {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+form > button {
+    background-color: #302d29;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    align-self: center;
+}
+
+input, textarea {
+    border: 0.1rem #89b983 solid;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #F4EEEE;
+}
+
+.connect {
     display: flex;
     flex-direction: column;
     gap: 1rem;
