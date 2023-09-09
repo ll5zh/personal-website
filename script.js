@@ -263,13 +263,15 @@ const Connect = (() => {
         connectList.forEach((item) => {
             const row = document.createElement('button');
             row.style.cssText = 'display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: center; background-color: #F4EEEE; padding: 1rem; border: 0.1rem #89b983 solid; border-radius: 2rem; align-self: center; width: 23rem';
-            const title = document.createElement('a');
-            title.href = item.link;
+            const title = document.createElement('div');
             title.innerHTML = item.title;
             title.style.cssText = 'color: #302d29; font-size: 1.2rem; text-decoration: underline';
             const icon = document.createElement('img');
             icon.style.cssText = 'max-height: 5rem';
             icon.src = item.icon;
+            row.addEventListener('click', function(e) {
+                window.open(item.link, '_blank');
+            });
             row.appendChild(title);
             row.appendChild(icon);
             connectInfo.appendChild(row);
