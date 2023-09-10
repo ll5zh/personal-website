@@ -69,15 +69,15 @@
     <div class="footer" id="contact">
         <div class="title h1">Thanks for Visiting!</div>
         <div class="contact">
-            <form action="mail.php" method="POST">
+            <form id="form" method="GET">
                 <div class="title">Contact Form</div>
                 <div class="question">
                     <label for="first-name">First Name <span style="color: #302d29">*</span></label>
-                    <input type="text" id="first-name" name="first-name" required>
+                    <input type="text" id="first-name" name="firstName" required>
                 </div>
                 <div class="question">
                     <label for="last-name">Last Name <span style="color: #302d29">*</span></label>
-                    <input type="text" id="last-name" name="last-name" required>
+                    <input type="text" id="last-name" name="lastName" required>
                 </div>
                 <div class="question">
                     <label for="email">Email <span style="color: #302d29">*</span></label>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="question">
                     <label for="phone">Phone Number</label>
-                    <input type="number" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone">
                 </div>
                 <div class="question">
                     <label for="message">Message <span style="color: #302d29">*</span></label>
