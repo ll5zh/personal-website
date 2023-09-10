@@ -284,3 +284,22 @@ const Connect = (() => {
 })();
 
 Connect.printConnect();
+
+// Contact Form //
+
+const form = document.querySelector('#form');
+const firstName = document.querySelector('#first-name');
+const lastName = document.querySelector('#last-name');
+const email = document.querySelector('#email');
+const phone = document.querySelector('#phone');
+const message = document.querySelector('#message');
+
+form.addEventListener('submit', function(e) {
+    const firstNameVal = firstName.value;
+    const lastNameVal = lastName.value;
+    const emailVal = email.value;
+    const phoneVal = phone.value;
+    const messageVal = message.value;
+    const sendTo = 'lzhanglucia@gmail.com';
+    document.location = "mailto:"+sendTo+"?subject="+firstNameVal+" "+lastNameVal+": Contacting Lucia Zhang&body="+"EMAIL:%0D%0A"+emailVal+"%0D%0A%0D%0APHONE:%0D%0A"+phoneVal+"%0D%0A%0D%0AMESSAGE:%0D%0A"+messageVal;
+})
