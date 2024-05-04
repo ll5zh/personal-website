@@ -152,6 +152,10 @@ svg {
 }
 */
 
+h1 {
+  font-size: var(--fs-title);
+}
+
 .flex {
   display: flex;
   gap: var(--gap, 0.2rem);
@@ -500,10 +504,43 @@ textarea {
     flex-direction: column;
     justify-content: stretch;
     width: 100%;
-    min-width: fit-content;
+  }
+
+  h1 {
+    font-size: 5vw;
   }
 
   section {
-    padding: 0rem 4rem 2rem 4rem;
+    padding: 0rem 8vw 2rem 8vw;
+  }
+}
+
+@media (max-width: 840px) {
+  h1 {
+    color: orange;
+    font-size: 12vw;
+    text-shadow: 0.6vw 0.5vw var(--clr-accent-400);
+  }
+
+  .home > .text > p {
+    font-size: 8vw;
+    /* text-shadow: 0.6vw 0.5vw var(--clr-accent-400); */
+  }
+
+  .home > .text > h1 {
+    font-size: 15vw;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .home > .text {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .home > .text {
+    margin-top: 2rem;
   }
 }

@@ -13,3 +13,18 @@ mobileNavToggle.addEventListener('click', () => {
   }
 });
 
+/* Contact form */
+const form = document.querySelector('#form');
+const name = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+
+form.addEventListener('submit', function(e) {
+  const nameVal = name.value;
+  const emailVal = email.value;
+  const messageVal = message.value;
+  const sendTo = 'll5zhang@uwaterloo.ca';
+  console.log(messageVal);
+  document.location = "mailto:"+sendTo+"?subject="+encodeURIComponent(nameVal)+": Contacting Lucia Zhang&body="+"EMAIL:%0A"+encodeURIComponent(emailVal)+"%0A%0AMESSAGE:%0A"+encodeURIComponent(messageVal);
+});
+

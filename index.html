@@ -43,7 +43,7 @@
           </div>
           <div class="text flex">
             <p class="text-neutral-900 ff-primary fw-heading fs-heading">Hi, I'm</p>
-            <h1 id="home-title" class="text-neutral-900 ff-heading fw-heading fs-title">Lucia &lt;3</h1>
+            <h1 id="home-title" class="text-neutral-900 ff-heading fw-heading">Lucia &lt;3</h1>
             <div class="bg-secondary-300 text-box">
               <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300">
                 Hello! I currently study Computer Science at the University of Waterloo. I'm interested in exploring the various areas
@@ -68,7 +68,7 @@
       <section id="about">
         <div class="about left-columns">
           <div class="text">
-            <h1 class="text-neutral-900 ff-heading fw-heading fs-title">About</h1>
+            <h1 class="text-neutral-900 ff-heading fw-heading">About</h1>
             <div class="bg-accent-300 text-box">
               <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300">
                 I'm always up for a logic puzzle — from solving Sudoku grids and math contest problems, to eventually learning
@@ -93,7 +93,7 @@
 
       <section id="experience">
         <div class="experience">
-          <h1 class="text-neutral-900 ff-heading fw-heading fs-title">Experience</h1>
+          <h1 class="text-neutral-900 ff-heading fw-heading">Experience</h1>
           <div class="container flex">
             <div class="card bg-secondary-300 bd-secondary-400">
               <div class="title bg-secondary-400">
@@ -147,7 +147,7 @@
 
       <section id="contact">
         <div class="contact">
-          <h1 class="text-neutral-900 ff-heading fw-heading fs-title">Contact</h1>
+          <h1 class="text-neutral-900 ff-heading fw-heading">Contact</h1>
           <div class="even-columns">
             <div class="info bg-accent-300 bd-accent-400 ff-primary text-neutral-900 connect">
               <p class="fs-primary-400 fw-primary-bold">Connect</p>
@@ -173,18 +173,18 @@
             </div>
             <div class="action bg-secondary-300 bd-secondary-400 ff-primary text-neutral-900">
               <p class="fs-primary-400 fw-primary-bold">Message</p>
-              <form action="" class="flex">
+              <form method="get" enctype="text/plain" id="form" class="flex">
                 <div class="question">
                   <label for="name" class="fw-primary-semi-bold fs-primary-200">Name *</label>
-                  <input type="text" name="name" required />
+                  <input type="text" name="name" id="name" required />
                 </div>
                 <div class="question">
                   <label for="email" class="fw-primary-semi-bold fs-primary-200">Email *</label>
-                  <input type="email" name="email" required />
+                  <input type="email" name="email" id="email" required />
                 </div>
                 <div class="question">
                   <label for="message" class="fw-primary-semi-bold fs-primary-200">Message *</label>
-                  <textarea name="message" id="" cols="30" rows="5" required></textarea>
+                  <textarea name="message" id="" cols="30" rows="5" id="message" required></textarea>
                 </div>
                 <button type="submit" class="fw-primary-bold fs-primary-200">Send</button>
               </form>
