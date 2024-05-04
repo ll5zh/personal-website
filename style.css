@@ -179,11 +179,6 @@ header {
 
 .primary-navigation {
   list-style: none;
-  /* background-color: #f2df8a; */
-  /*
-  position: fixed;
-  right: 0%;
-  */
   background-color: var(--clr-neutral-200);
 }
 
@@ -272,7 +267,7 @@ main {
 
 /* General sections */
 section {
-  padding: 0rem 4rem 0.5rem 4rem;
+  padding: 0.5rem 4rem 2rem 4rem;
   scroll-margin-top: 6rem;
 }
 
@@ -337,8 +332,14 @@ h1 {
   width: 60px;
 }
 
-@media (max-width: 1020px) {
-  /* Need to change intro layout */
+@media (max-width: 900px) {
+  .home .img {
+    display: none;
+  }
+
+  .right-columns {
+    grid-template-columns: auto;
+  }
 }
 
 /* About section */
@@ -364,6 +365,17 @@ h1 {
 
 .about .text-box {
   border: 0.3rem solid var(--clr-accent-400);
+}
+
+@media (max-width: 900px) {
+  /* About */
+  .about > .img {
+    display: none;
+  }
+
+  .left-columns {
+    grid-template-columns: auto;
+  }
 }
 
 /* Experience section */
@@ -471,4 +483,27 @@ textarea {
 
 #contact {
   margin-bottom: 3rem;
+}
+
+@media (max-width: 50em) {
+  .contact .even-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .even-columns > div {
+    width: 100%;
+  }
+
+  body {
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
+    min-width: fit-content;
+  }
+
+  section {
+    padding: 0rem 4rem 2rem 4rem;
+  }
 }
