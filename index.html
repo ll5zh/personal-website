@@ -1,103 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucia Zhang</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="https://w7.pngwing.com/pngs/53/666/png-transparent-treble-clef-music-song-musical-musical-note-melody-symbol-icon-colorful-notes.png" type="image/icon type">
-    <script src="./script.js" defer></script>
-</head>
-<body>
-    <div class="nav">
-        <div class="title h1">Lucia Zhang</div>
-        <div class="links">
-            <button class="link"><a href="#about">About</a></button>
-            <button class="link"><a href="#experience">Experience</a></button>
-            <button class="link"><a href="#interests">Interests</a></button>
-            <button class="link"><a href="#contact">Contact</a></button>
-        </div>
-    </div>
-    <div class="body">
-        <div class="welcome" id="welcome">
-            <div class="title h1">Welcome!</div>
-            <div class="text">Hello and welcome to my personal website! My name is Lucia (she/her) and I study Computer Science at the University of Waterloo. Thanks for visiting, and I hope that you'll learn a little bit more about me!</div>
-        </div>
-        <div class="about" id="about">
-            <img src="images/IMG_1785.jpg" alt="Lake Louise">
-            <div class="title h1">About Me</div>
-            <div class="text">
-                <table id="about-info">
-                    <td style="background-color: #302d29; color: #F4EEEE; text-align: center" colspan="2">
-                        "Have a whimsical & wonderful day."
-                    </td>
-                </table>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="flex">
+    <header class="primary-header flex">
+
+      <div class="flex">
+        <img src="images/flower-thick.svg" alt="logo" class="logo">
+        <p class="text-neutral-900 ff-heading fw-heading fs-heading">LZ</p>
+      </div>
+
+      <button class="mobile-navigation-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex fw-primary-bold ff-primary fs-primary-300">
+          <li><a class="text-neutral-900" href="">Home</a></li>
+          <li><a class="text-neutral-900" href="#about">About</a></li>
+          <li><a class="text-neutral-900" href="#experience">Experience</a></li>
+          <li><a class="text-neutral-900" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+  
+    </header>
+
+    <main>
+      <section id="">
+        <div class="home right-columns">
+          <div class="img">
+            <img src="images/home-photo.jpg" alt="portrait with cherry blossoms" />
+          </div>
+          <div class="text flex">
+            <p class="text-neutral-900 ff-primary fw-heading fs-heading">Hi, I'm</p>
+            <h1 id="home-title" class="text-neutral-900 ff-heading fw-heading fs-title">Lucia &lt;3</h1>
+            <div class="bg-secondary-300 text-box">
+              <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300">
+                Hello! I currently study Computer Science at the University of Waterloo. I'm interested in exploring the various areas
+                of software development!
+              </p>
             </div>
-        </div>
-        <div class="experience" id="experience">
-            <div class="title h1">Experience</div>
-            <div class="text">
-                <div class="skills">
-                    <div class="title">Skills</div>
-                    <div class="general-wrap">
-                        <div class="title">General Programming</div>
-                        <div id="general-exp"></div>
-                    </div>
-                    <div class="web-wrap">
-                        <div class="title">Web Development</div>
-                        <div id="web-exp"></div>
-                    </div>
-                    <div class="script-wrap">
-                       <div class="title">Scripting</div>
-                        <div id="script-exp"></div>
-                    </div>
-                </div>
-                <div class="work">
-                    <div class="title">Work Experience</div>
-                    <table id="work">
-                    </table>
-                </div>
+            <div class="contacts">
+              <a href="mailto:ll5zhang@uwaterloo.ca">
+                <img src="images/reshot-icon-email.svg" alt="email icon" />
+              </a>
+              <a href="https://github.com/ll5zh">
+                <img src="images/github-mark.svg" alt="github icon" />
+              </a>
+              <a href="https://www.linkedin.com/in/lzhanglucia/">
+                <img src="images/icons8-linkedin.svg" alt="linkedin icon" />
+              </a>
             </div>
+          </div>
         </div>
-        <div class="interests" id="interests">
-            <div class="title h1">Interests</div>
-            <div class="text">
-                <div class="interests-info"></div>
+      </section>
+
+      <section id="about">
+        <div class="about left-columns">
+          <div class="text">
+            <h1 class="text-neutral-900 ff-heading fw-heading fs-title">About</h1>
+            <div class="bg-accent-300 text-box">
+              <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300">
+                I'm always up for a logic puzzle — from solving Sudoku grids and math contest problems, to eventually learning
+                programming. My interests in both code and design are what initially inspired me to explore front-end development! 
+                Through my academics and work experience, I hope to bring all kinds of computing projects and full stack applications 
+                to life. I aspire to contribute software projects that positively impact users and the world.
+              </p>
+              <br />
+              <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300">
+                In my free time, I enjoy artistic endeavours! I arrange piano covers for my favourite songs (watch on YouTube!),
+                and sing with acapella groups on campus. I also love bullet journaling and writing calligraphy.
+              </p>
             </div>
+          </div>
+          <div class="img flex">
+            <!--- <img src="images/pink-flowers.jpg" alt="pink flowers" /> --->
+            <img src="images/about-portrait.jpg" alt="portrait with tulips" />
+            <img src="images/orange-purple-flowers.jpg" alt="orange and purple flowers" />
+          </div>
         </div>
-    </div>
-    <div class="footer" id="contact">
-        <div class="title h1">Thanks for Visiting!</div>
+      </section>
+
+      <section id="experience">
+        <div class="experience">
+          <h1 class="text-neutral-900 ff-heading fw-heading fs-title">Experience</h1>
+          <div class="container flex">
+            <div class="card bg-secondary-300 bd-secondary-400">
+              <div class="title bg-secondary-400">
+                <h2 class="text-neutral-900 ff-primary fw-heading fs-primary-400">Test Automation Specialist</h2>
+                <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300 location">
+                  Ontario Institute of Cancer Research (Jan 2024 - Apr 2024)
+                </p>
+              </div>
+              <div class="body text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-200">
+                <p>
+                  Developed bug fixes and features within the user interface. Expanded unit and integration tests. Troubleshooted flaky
+                  integration tests, thus lowering front end flakiness by 50%. Implemented new features, jobs, and third-party integrations to
+                  optimize continuous integration processes.
+                </p>
+                <p class="skills"><span class="fw-primary-bold">Languages/Tools:</span> Angular, TypeScript, Cypress, YAML</p>
+              </div>
+            </div>
+            <div class="card bg-accent-300 bd-accent-400">
+              <div class="title bg-accent-400">
+                <h2 class="text-neutral-900 ff-primary fw-heading fs-primary-400">Information Technology Support</h2>
+                <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300 location">
+                  University of Waterloo (May 2023 - Aug 2023)
+                </p>
+              </div>
+              <div class="body text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-200">
+                <p>
+                  Troubleshooted customer issues regarding computer imaging, networking, hardware, and software.
+                  Maintained the Department of Psychology website by fixing 150+ broken links & creating/editing 20+ web pages.
+                  Wrote shell scripts to parse HTML data and automate file deletions.
+                </p>
+                <p class="skills"><span class="fw-primary-bold">Languages/Tools:</span> Python, Perl, Waterloo Content Management System</p>
+              </div>
+            </div>
+            <div class="card bg-secondary-300 bd-secondary-400">
+              <div class="title bg-secondary-400">
+                <h2 class="text-neutral-900 ff-primary fw-heading fs-primary-400">Teaching Assistant</h2>
+                <p class="text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-300 location">
+                  Olympiads School (Jul 2021 - Jun 2022)
+                </p>
+              </div>
+              <div class="body text-neutral-900 ff-primary fw-primary-semi-bold fs-primary-200">
+                <p>
+                  Marked contest-level mathematics and science homework assignments for elementary school to high school students.
+                  Maintained student grade spreadsheets on a weekly basis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
         <div class="contact">
-            <form id="form" method="GET">
-                <div class="title">Contact Form</div>
-                <div class="question">
-                    <label for="first-name">First Name <span style="color: #302d29">*</span></label>
-                    <input type="text" id="first-name" name="firstName" required>
+          <h1 class="text-neutral-900 ff-heading fw-heading fs-title">Contact</h1>
+          <div class="even-columns">
+            <div class="info bg-accent-300 bd-accent-400 ff-primary text-neutral-900 connect">
+              <p class="fs-primary-400 fw-primary-bold">Connect</p>
+              <div class="body flex">
+                <p class="fw-primary-semi-bold fs-primary-200">
+                  I hope to stay in touch with you! You can find me at any of the following platforms:
+                </p>
+                <div class="items flex">
+                  <div class="item flex">
+                    <img src="images/reshot-icon-email.svg" alt="email icon" />
+                    <a href="mailto:ll5zhang@uwaterloo.ca" class="text-neutral-900 fw-primary-bold fs-primary-200">Email</a>
+                  </div>
+                  <div class="item flex">
+                    <img src="images/github-mark.svg" alt="github icon" />
+                    <a href="https://github.com/ll5zh" class="text-neutral-900 fw-primary-bold fs-primary-200">GitHub</a>
+                  </div>
+                  <div class="item flex">
+                    <img src="images/icons8-linkedin.svg" alt="linkedin icon" />
+                    <a href="https://www.linkedin.com/in/lzhanglucia/" class="text-neutral-900 fw-primary-bold fs-primary-200">LinkedIn</a>
+                  </div>
                 </div>
-                <div class="question">
-                    <label for="last-name">Last Name <span style="color: #302d29">*</span></label>
-                    <input type="text" id="last-name" name="lastName" required>
-                </div>
-                <div class="question">
-                    <label for="email">Email <span style="color: #302d29">*</span></label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="question">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="question">
-                    <label for="message">Message <span style="color: #302d29">*</span></label>
-                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-            <div class="connect">
-                <div class="title">Connect</div>
+              </div>
             </div>
+            <div class="action bg-secondary-300 bd-secondary-400 ff-primary text-neutral-900">
+              <p class="fs-primary-400 fw-primary-bold">Message</p>
+              <form action="" class="flex">
+                <div class="question">
+                  <label for="name" class="fw-primary-semi-bold fs-primary-200">Name *</label>
+                  <input type="text" name="name" required />
+                </div>
+                <div class="question">
+                  <label for="email" class="fw-primary-semi-bold fs-primary-200">Email *</label>
+                  <input type="email" name="email" required />
+                </div>
+                <div class="question">
+                  <label for="message" class="fw-primary-semi-bold fs-primary-200">Message *</label>
+                  <textarea name="message" id="" cols="30" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="fw-primary-bold fs-primary-200">Send</button>
+              </form>
+            </div>
+          </div>
         </div>
-    </div>
-    
-</body>
+      </section>
+    </main>
+
+  </body>
 </html>
